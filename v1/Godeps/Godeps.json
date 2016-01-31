@@ -1,5 +1,5 @@
 {
-	"ImportPath": ".",
+	"ImportPath": "GroupMail/v1",
 	"GoVersion": "go1.5",
 	"Deps": []
 }
