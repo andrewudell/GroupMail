@@ -8,6 +8,7 @@ import (
 
 func Logger(inner http.Handler, text string) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		start := time.Now()
 
 		inner.ServeHTTP(w, r)
 
@@ -16,6 +17,7 @@ func Logger(inner http.Handler, text string) http.Handler {
 			r.Method,
 			r.RequestURI,
 			text,
+			time.Since(start),
 		)
 	})
 }

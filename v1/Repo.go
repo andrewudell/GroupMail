@@ -12,9 +12,9 @@ func init() {
 }
 
 func RepoFindMessage(id int) Message {
-	for _, m := range messages {
-		if m.Id == id {
-			return m
+	for _, t := range messages {
+		if t.Id == id {
+			return t
 		}
 	}
 	// return empty Message if not found
@@ -24,14 +24,14 @@ func RepoFindMessage(id int) Message {
 //this is bad, I don't think it passes race condtions
 func RepoCreateMessage(t Message) Message {
 	currentId += 1
-	m.Id = currentId
-	messages = append(messages, m)
-	return m
+	t.Id = currentId
+	messages = append(messages, t)
+	return t
 }
 
 func RepoDestroyMessage(id int) error {
-	for i, m := range messages {
-		if m.Id == id {
+	for i, t := range messages {
+		if t.Id == id {
 			messages = append(messages[:i], messages[i+1:]...)
 			return nil
 		}
