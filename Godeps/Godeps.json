@@ -1,5 +1,14 @@
 {
-	"ImportPath": ".",
+	"ImportPath": "github.com/AndrewUdell/GroupMail",
 	"GoVersion": "go1.5",
-	"Deps": []
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Rev": "1c83b3eabd45b6d76072b66b746c20815fb2872d"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Rev": "26a6070f849969ba72b72256e9f14cf519751690"
+		}
+	]
 }

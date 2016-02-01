@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/gorilla/mux"
+	"github.com/AndrewUdell/GroupMail/Godeps/_workspace/src/github.com/gorilla/mux"
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
