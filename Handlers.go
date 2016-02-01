@@ -51,7 +51,7 @@ func MessageShow(w http.ResponseWriter, r *http.Request) {
 
 /*
 Test with this curl command:
-curl -H "Content-Type: application/json" -d '{"text":"google.com"}' http://localhost:8000/messages
+curl -H "Content-Type: application/json" -d '{"text":"google.com"}' http://localhost:8080/messages
 */
 func MessageCreate(w http.ResponseWriter, r *http.Request) {
 	var message Message

@@ -25,13 +25,13 @@ var routes = Routes{
 		MessageIndex,
 	},
 	Route{
-		"TodoCreate",
+		"MessageCreate",
 		"POST",
 		"/messages",
 		MessageCreate,
 	},
 	Route{
-		"TodoShow",
+		"MessageShow",
 		"GET",
 		"/messages/{messageId}",
 		MessageShow,
