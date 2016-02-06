@@ -13,13 +13,13 @@ const (
 	UserCollection = "Users"
 )
 
-type Message struct {
+type User struct {
 	ID       bson.ObjectId `bson:"_id,omitempty"`
 	EmailAddress      string    `json:"email"`
 	Name      string    `json:"name"`
 }
 
-type Messages []Message
+type Users []User
 
 func CreateUser(user User) error {
 	id := bson.NewObjectId()
