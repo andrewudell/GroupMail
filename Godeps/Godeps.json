@@ -9,6 +9,11 @@
 		{
 			"ImportPath": "github.com/gorilla/mux",
 			"Rev": "26a6070f849969ba72b72256e9f14cf519751690"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2",
+			"Comment": "r2016.02.04",
+			"Rev": "3871eddd896b8b70fe630053af5e81f2c1e8ed53"
 		}
 	]
 }
