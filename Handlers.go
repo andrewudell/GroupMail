@@ -72,7 +72,7 @@ func MessageCreate(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	t := RepoCreateMessage(message)
+	t := CreateMessage(message)
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	w.WriteHeader(http.StatusCreated)
 	if err := json.NewEncoder(w).Encode(t); err != nil {

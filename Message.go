@@ -33,3 +33,13 @@ func CreateMessage(message Message) error {
 func getMessageCollection() *mgo.Collection {
 	return DatabaseInstance.C(MessageCollection)
 }
+
+func FindAllMessages() error {
+	var messages []Messages
+	err := getMessageCollection().find().Sort("-time").All(&results)
+	if err != nil {
+		panic(err)
+	} else {
+		fmt.Println("All Messages: ", &results)
+	}
+}
