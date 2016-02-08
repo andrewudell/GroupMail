@@ -4,6 +4,7 @@ import (
 	"time"
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
+	"fmt"
 )
 
 var (
@@ -34,12 +35,12 @@ func getMessageCollection() *mgo.Collection {
 	return DatabaseInstance.C(MessageCollection)
 }
 
-func FindAllMessages() error {
+func FindAllMessages() {
 	var messages []Messages
-	err := getMessageCollection().find().Sort("-time").All(&results)
+	err := getMessageCollection().find().Sort("-time").All(&messages)
 	if err != nil {
 		panic(err)
 	} else {
-		fmt.Println("All Messages: ", &results)
+		fmt.Println("All Messages: ", &messages)
 	}
 }
